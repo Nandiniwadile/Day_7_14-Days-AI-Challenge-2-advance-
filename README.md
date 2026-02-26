@@ -1,61 +1,66 @@
-📅 Day 7 – MLflow Experiment Tracking
-🚀 14 Days AI Challenge
+---
+
+# 📅 Day 7 – MLflow Experiment Tracking
+
+## 🚀 14 Days AI Challenge
 
 Platform: Databricks
 Tool Used: MLflow
 Model: Random Forest Classifier
 
-📌 Objective
+---
+
+## 📌 Objective
 
 Implemented MLflow to:
 
-Log experiment runs
+* Log experiment runs
+* Track parameters
+* Record evaluation metrics
+* Save trained model
 
-Track parameters
+---
 
-Record evaluation metrics
+## 📊 Step 1 – Data Preparation
 
-Save trained model
+* Created Spark DataFrame
+* Generated feature vector using `VectorAssembler`
+* Split data into train and test sets
 
-📊 Step 1 – Data Preparation
+---
 
-Created Spark DataFrame
+## 🌲 Step 2 – Model Training
 
-Generated feature vector using VectorAssembler
+* Trained `RandomForestClassifier`
+* Used features column for prediction
+* Built binary classification model
 
-Split data into train and test sets
+---
 
-🌲 Step 2 – Model Training
+## 📈 Step 3 – Model Evaluation
 
-Trained RandomForestClassifier
+* Used `BinaryClassificationEvaluator`
+* Metric: Area Under ROC Curve (AUC)
+* Achieved AUC Score: **1.0**
 
-Used features column for prediction
+---
 
-Built binary classification model
+## 🔍 Step 4 – MLflow Tracking
 
-📈 Step 3 – Model Evaluation
+* Started MLflow run
+* Logged parameter: model_type = RandomForest
+* Logged metric: AUC
+* Logged Spark model artifact
 
-Used BinaryClassificationEvaluator
+---
 
-Metric: Area Under ROC Curve (AUC)
+## 🎯 Key Learnings
 
-Achieved AUC Score: 1.0
+* Experiment tracking is essential in production ML
+* MLflow helps compare and manage multiple runs
+* Logging models makes deployment easier
 
-🔍 Step 4 – MLflow Tracking
+---
 
-Started MLflow run
 
-Logged parameter: model_type = RandomForest
-
-Logged metric: AUC
-
-Logged Spark model artifact
-
-🎯 Key Learnings
-
-Experiment tracking is essential in production ML
-
-MLflow helps compare and manage multiple runs
-
-Logging models makes deployment easier
 
